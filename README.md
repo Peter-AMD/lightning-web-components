@@ -1,3 +1,5 @@
+[![CI](https://github.com/Peter-AMD/lightning-web-components/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Peter-AMD/lightning-web-components/actions/workflows/ci.yml)
+
 # LWC Boilerplate Example
 
 The **LWC Boilerplate** example contains the minimum code needed to get a simple Single Page Application (SPA) on LWR running.
