@@ -12,7 +12,9 @@
     "test": "jest",
     "format": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
     "format:verify": "prettier --check \"**/*.{css,html,js,json,md,yaml,yml}\"",
-    "lint": "eslint **/src/**/*.js"
+    "lint": "eslint **/src/**/*.js",
+    "precommit": "lint-staged",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "lwc": "2.5.8",
@@ -29,7 +31,20 @@
     "eslint": "^8.12.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.1.3",
+    "husky": "^7.0.4",
     "jest": "^27.5.1",
+    "lint-staged": "^12.3.7",
     "prettier": "^2.6.2"
+  },
+  "lint-staged": {
+    "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
+      "prettier --write"
+    ],
+    "**/src/**/*.js": [
+      "eslint"
+    ],
+    "**/src/**": [
+      "jest --bail --findRelatedTests"
+    ]
   }
 }
