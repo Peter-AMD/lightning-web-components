@@ -41,5 +41,5 @@ jobs:
         run: npm run lint
 
       # Unit tests
-      #- name: 'Unit test Lightning Web Components'
-      #  run: npm test
+      - name: 'Unit test Lightning Web Components'
+        run: npm test
